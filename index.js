@@ -4,10 +4,24 @@ import { Parser } from "@json2csv/plainjs";
 const keywordsInput = document.querySelector("#keywords");
 const idioma = document.querySelector('[name="idioma"]');
 const generateButton = document.querySelector("#generate");
-const model = document.querySelector('[name="model"]');
+const model = document.querySelector('#model');
+const apiKey = document.querySelector("#api-key");
+const btnApiKey = document.querySelector("#btn-api-key");
+
+const apiKeyValue = localStorage.getItem("apiKey");
+
+if (apiKeyValue) {
+  apiKey.value = apiKeyValue;
+}
+
+btnApiKey.addEventListener("click", () => {
+  localStorage.setItem("apiKey", apiKey.value);
+  location.reload();
+});
 
 const openai = new OpenAI({
-  apiKey: "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",
+  // apiKey: "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",
+  apiKey: apiKeyValue,
   dangerouslyAllowBrowser: true,
 });
 

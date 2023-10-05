@@ -8,6 +8,13 @@
   <body>
     <textarea id="keywords" rows="3" placeholder="Palabras clave"></textarea>
 
+    <input type="text" id="api-key" placeholder="OpenAI key" />
+    <button id="btn-api-key">
+      Guardar
+    </button>
+
+    <br>
+
     <input type="checkbox" name="idioma" value="español" /> Español
     <input type="checkbox" name="idioma" value="ingles" /> Ingles
 
@@ -19,9 +26,6 @@
     <button id="generate">Generar contenido</button>
 
     <button id="download">Descargar CSV</button>
-
-    <!-- progressbar -->
-    <progress value="0" max="100"></progress>
 
     <div id="article"></div>
     <div id="description"></div>
