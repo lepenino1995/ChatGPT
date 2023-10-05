@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript ChatGPT</title>
+    <script type="module" crossorigin src="/assets/index-486d5e72.js"></script>
+  </head>
+  <body>
+    <textarea id="keywords" rows="3" placeholder="Palabras clave"></textarea>
+
+    <input type="text" id="api-key" placeholder="OpenAI key" />
+    <button id="btn-api-key">
+      Guardar
+    </button>
+
+    <br>
+
+    <input type="checkbox" name="idioma" value="español" /> Español
+    <input type="checkbox" name="idioma" value="ingles" /> Ingles
+
+    <select id="model">
+      <option value="gpt-3.5-turbo">GPT-3</option>
+      <option value="gpt-4">GPT-4</option>
+    </select>
+
+    <button id="generate">Generar contenido</button>
+
+    <button id="download">Descargar CSV</button>
+
+    <div id="article"></div>
+    <div id="description"></div>
+
+    
+  </body>
+</html>
