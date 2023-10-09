@@ -11,6 +11,8 @@
             margin: 20px;
             background-color: #f6f7fb;
             display: flex;
+            position: relative;
+            /* Añadido para posicionar el elemento de "IP check" correctamente */
         }
 
         .input-section {
@@ -23,7 +25,10 @@
             padding: 20px;
         }
 
-        textarea, input, select, button {
+        textarea,
+        input,
+        select,
+        button {
             margin-bottom: 15px;
             padding: 10px;
             border: 1px solid #ddd;
@@ -48,49 +53,71 @@
             margin: 10px 0;
         }
 
-        #article, #description {
+        #article,
+        #description {
             margin-top: 20px;
             padding: 20px;
             border-radius: 5px;
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        #ip-check-section {
+            #ip-check-section {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                display: none;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                /* Nuevo margen para separarlo del botón */
+            }
+
+        }
     </style>
-  <script type="module" crossorigin src="/ChatGPT/assets/index-10e509bd.js"></script>
+  <script type="module" crossorigin src="/ChatGPT/assets/index-175ee003.js"></script>
 </head>
 
 <body>
 
-<div class="input-section">
-    <input type="email" id="email" placeholder="Correo Electrónico" /> <!-- Campo para el correo electrónico -->
-    <textarea id="keywords" rows="3" placeholder="Palabras clave"></textarea>
-    <input type="text" id="api-key" placeholder="OpenAI key" />
-    <button id="btn-api-key">Guardar</button>
+    <div class="input-section">
+        <input type="email" id="email" placeholder="Correo Electrónico" />
+        <textarea id="keywords" rows="3" placeholder="Palabras clave"></textarea>
+        <input type="text" id="api-key" placeholder="OpenAI key" />
+        <button id="btn-api-key">Guardar</button>
 
-    <label class="checkbox-label">
-        <input type="checkbox" name="idioma" value="español" /> Español
-    </label>
-    <label class="checkbox-label">
-        <input type="checkbox" name="idioma" value="ingles" /> Inglés
-    </label>
+        <label class="checkbox-label">
+            <input type="checkbox" name="idioma" value="español" /> Español
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" name="idioma" value="ingles" /> Inglés
+        </label>
 
-    <select id="model">
-        <option value="gpt-3.5-turbo">GPT-3</option>
-        <option value="gpt-4">GPT-4</option>
-    </select>
+        <select id="model">
+            <option value="gpt-3.5-turbo">GPT-3</option>
+            <option value="gpt-4">GPT-4</option>
+        </select>
 
-    <button id="generate">Generar contenido</button>
-    <button id="download">Descargar CSV</button>
-</div>
+        <button id="generate">Generar contenido</button>
+        <button id="download">Descargar CSV</button>
+    </div>
 
-<div class="content-section">
-    <div id="article"></div>
-    <div id="description"></div>
-</div>
+    <div class="content-section">
+        <!-- Sección para el ícono y el mensaje de "IP check" -->
+        <div id="ip-check-section">
+            <img src="/ChatGPT/assets/check-97ce7aa8.png" alt="Loading icon" id="loading-icon"
+                style="width: 30px; height: 30px; margin-right: 10px;">
+            IP check
+        </div>
+        <div id="article"></div>
+        <div id="description"></div>
+    </div>
 
-
+    
 
 </body>
 
 </html>
-
