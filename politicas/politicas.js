@@ -4,7 +4,7 @@ import { generatePolicy } from "../libs/generatePolicy.js";
 const btnGenerate = document.querySelector("#btnGenerate");
 
 window.addEventListener("DOMContentLoaded", async (event) => {
-  const res = await fetch("/data/countries.json");
+  const res = await fetch("/ChatGPT/data/countries.json");
   const data = await res.json();
   console.log(data);
 
