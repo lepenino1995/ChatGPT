@@ -1,5 +1,8 @@
-import OpenAI from "openai";
-import { Parser } from "@json2csv/plainjs";
+import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
+import {
+  Parser
+} from 'https://cdn.jsdelivr.net/npm/@json2csv/plainjs@7.0.3/+esm'
+
 
 const keywordsInput = document.querySelector("#keywords");
 const idioma = document.querySelector('[name="idioma"]');

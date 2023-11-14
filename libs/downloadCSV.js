@@ -1,4 +1,9 @@
-import { Parser } from "@json2csv/plainjs";
+// import { Parser } from "@json2csv/plainjs";
+
+import {
+  Parser
+} from 'https://cdn.jsdelivr.net/npm/@json2csv/plainjs@7.0.3/+esm'
+
 
 export function downloadCSV(rows, name = "data") {
   try {

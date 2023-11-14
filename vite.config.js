@@ -9,15 +9,23 @@ export default defineConfig({
       targets: [
         {
           src: "pro",
-          dest: "pro", 
+          dest: ".", 
         },
         {
           src: "politicas",
-          dest: "politicas", 
+          dest: ".", 
         },
         {
           src: "individual",
-          dest: "individual", 
+          dest: ".", 
+        },
+        {
+          src: "setup",
+          dest: ".", 
+        },
+        {
+          src: "libs",
+          dest: ".", 
         },
       ],
     }),

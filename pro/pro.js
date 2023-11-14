@@ -1,4 +1,5 @@
-import OpenAI from "openai";
+// import OpenAI from "openai";
+import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
 import { generatePolicy } from "../libs/generatePolicy.js";
 import { downloadCSV } from "../libs/downloadCSV.js";
 
@@ -6,7 +7,6 @@ const keywordInput = document.querySelector("#keywords");
 const keywordsGenerated = document.querySelector("#keywords-generated");
 const generateButton = document.querySelector("#generate");
 const model = document.querySelector("#model");
-const ipCheckSection = document.getElementById("ip-check-section");
 const apiKeyValue = localStorage.getItem("openaiApiKey");
 const cantidadPalabras = document.querySelector("#cantidad");
 
@@ -17,7 +17,7 @@ const websiteUrl = document.querySelector("#websiteURL");
 const country = document.querySelector("#country");
 
 window.addEventListener("DOMContentLoaded", async (event) => {
-  const res = await fetch("/data/countries.json");
+  const res = await fetch("/ChatGPT/data/countries.json");
   const data = await res.json();
   console.log(data);
 
@@ -100,13 +100,13 @@ generateButton.addEventListener("click", async () => {
   downloadCSV(data, "articulos");
 });
 
-window.onload = function () {
-  ipCheckSection.style.display = "flex";
+// window.onload = function () {
+//   ipCheckSection.style.display = "flex";
 
-  setTimeout(() => {
-    ipCheckSection.style.display = "none";
-  }, 10000);
-};
+//   setTimeout(() => {
+//     ipCheckSection.style.display = "none";
+//   }, 10000);
+// };
 
 async function textGenerator(keywordText, idiomaValue) {
   const text = [];

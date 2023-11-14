@@ -4,7 +4,7 @@ export async function generatePolicy(
 ) {
   const lang = document.querySelector('[name="idioma"]:checked').value;
 
-  const res = await fetch(`/templates/${lang}/${fileName}.txt`);
+  const res = await fetch(`/ChatGPT/templates/${lang}/${fileName}.txt`);
   const data = await res.text();
 
   return data
