@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup</title>
+    <link rel="stylesheet" href="/css/setup.css">
+</head>
+<body class="setup1">
+    <!-- setup.html -->
+    <input type="email" id="emailInput" placeholder="Ingrese su correo electrónico" />
+    <input type="text" id="openaiKeyInput" placeholder="Ingrese su API Key de OpenAI" />
+    <button id="saveButton">Guardar</button>
+
+    <script>
+    document.getElementById('saveButton').addEventListener('click', function() {
+      const email = document.getElementById('emailInput').value;
+      const openaiKey = document.getElementById('openaiKeyInput').value;
+      
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('openaiApiKey', openaiKey);
+
+      alert("Configuración guardada correctamente.");
+    });
+    </script>
+
+</body>
+</html>
