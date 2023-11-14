@@ -1,0 +1,83 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pro Boost Generator</title>
+  <link rel="stylesheet" href="/css/pro.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <h1>Pro Boost Generator</h1>
+  <h3>Un generador todo en uno</h3>
+
+  <div class="container-content">
+    <div class="input-section">
+
+      <div>
+        <h3 class="titulos-secundarios">Politicas</h3>
+
+        <label class="titulos-secundarios">Nombre de la empresa</label>
+        <input type="text" id="companyName" placeholder="Nombre de la empresa" />
+
+        <input type="text" id="websiteName" placeholder="Nombre de la web" />
+
+        <input type="text" id="websiteURL" placeholder="URL de la web" />
+
+        <select id="country" id="" placeholder="País">
+          <option value="">Pais
+        </select>
+        </select>
+
+        <input type="text" id="companyEmail" placeholder="Email de la empresa" />
+      </div>
+
+      <div>
+        <h3 class="titulos-secundarios">Articulos</h3>
+        <label class="titulos-secundarios">1 - Sobre que tratara tu nicho?</label>
+
+        <textarea id="keywords" rows="1" placeholder="Nicho de la web"></textarea>
+
+        <p class="titulos-secundarios">2 - Idioma del sitio</p>
+
+        <label class="container">Español
+          <input type="checkbox" name="idioma" value="es" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Ingles
+          <input type="checkbox" name="idioma" value="en" />
+          <span class="checkmark"></span>
+        </label>
+
+        <p class="titulos-secundarios">3 - Cantidad de arituclos</p>
+        <select id="cantidad">
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+
+        <p class="titulos-secundarios">4 - Potencia de la inteligencia</p>
+        <select id="model">
+          <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+          <option value="gpt-4">GPT-4</option>
+        </select>
+
+        <button id="generate">Generar contenido</button>
+      </div>
+
+      <div class="content-section">
+        <h3 class="titulos-secundarios">Texto Generado</h3>
+        <div id="keywords-generated"></div>
+        <div id="article"></div>
+        <div id="description"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./pro.js" type="module"></script>
+</body>
+
+</html>
