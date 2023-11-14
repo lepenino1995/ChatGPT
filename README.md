@@ -28,7 +28,7 @@ git commit -m "mensaje"
 para subir los cambios
 
 ```
-git push
+git push origin main
 ```
 
 ### Identificadores de Texto de Politicas

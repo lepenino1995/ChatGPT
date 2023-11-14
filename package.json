@@ -11,7 +11,8 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-static-copy": "^0.17.0"
   },
   "dependencies": {
     "@json2csv/plainjs": "^7.0.3",
