@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/public/css/politicas.css" />
+  <title>Politicas</title>
+</head>
+
+
+<body>
+  <h1>Pro Boost Generator</h1>
+  <h3>Politicas</h3>
+
+  <div class="main-container">
+    <label>Nombre de la empresa</label>
+    <input type="text" id="companyName" placeholder="Nombre de la empresa" />
+
+    <input type="text" id="websiteName" placeholder="Nombre de la web" />
+
+    <input type="text" id="websiteURL" placeholder="URL de la web" />
+
+    <select id="country" id="" placeholder="País">
+      <option value="">Pais</option>
+    </select>
+
+    <input type="text" id="companyEmail" placeholder="Email de la empresa" />
+
+    <label class="container">Español
+      <input type="checkbox" name="idioma" value="es" />
+      <span class="checkmark"></span>
+    </label>
+    <label class="container">Ingles
+      <input type="checkbox" name="idioma" value="en" />
+      <span class="checkmark"></span>
+    </label>
+
+    <button id="btnGenerate">Generar</button>
+
+  </div>
+
+  <script type="module" src="./politicas.js"></script>
+</body>
+
+</html>
