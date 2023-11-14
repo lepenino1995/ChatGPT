@@ -1,59 +1,68 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pro Boost Generator</title>
-    
-
-    <link rel="icon" type="image/jpg"
-        href="https://res.cloudinary.com/dhkl5kjip/image/upload/v1699135127/swcxqauprfmhlumn7oya.png">
-  <script type="module" crossorigin src="/ChatGPT/assets/index-663a7cf5.js"></script>
-  <link rel="stylesheet" href="/ChatGPT/assets/index-dc071ffa.css">
+    <link rel="stylesheet" href="/css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <h10 class="pro">Pro Boost Generator</h10>
-    <h10 class="boost">Pro Boost Generator</h10>
-    <div class="input-section">
-        <input type="email" id="email" placeholder="Correo Electrónico" />
-        <textarea id="keywords" rows="3" placeholder="Palabras clave"></textarea>
-        <input type="text" id="api-key" placeholder="OpenAI key" />
-        <button id="btn-api-key">Guardar</button>
+    <h1>Pro Boost Generator</h1>
 
-        <label class="container">Español
-            <input type="checkbox" name="idioma" value="español" />
-            <span class="checkmark"></span>
-        </label>
-        <label class="container">Ingles
-            <input type="checkbox" name="idioma" value="ingles" />
-            <span class="checkmark"></span>
-        </label>
 
-        <select id="model">
-            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
-            <option value="gpt-4">GPT-4</option>
-        </select>
+    <section>
+        <a href="../pro/pro.html">
+            <div class="card" style="--color: #fff">
+                <i class="fa-solid fa-paintbrush"></i>
+                <div class="title">Pro Boost Generator</div>
+                <div class="detail">
+                    Genera todo con un clic
+                </div>
+            </div>
+        </a>
 
-        <button id="generate">Generar contenido</button>
-        <!-- <button id="download">Descargar CSV</button> -->
-    </div>
 
-    <div class="content-section">
-        <!-- Sección para el ícono y el mensaje de "IP check" -->
-        <div id="ip-check-section" style="color: white;">
-            <img src="/ChatGPT/assets/check-97ce7aa8.png" alt="Loading icon" id="loading-icon"
-                style="width: 30px; height: 30px; margin-right: 10px;">
-            IP check
+        <a href="../individual/index.html">
+            <div class="card" style="--color: #fff">
+                <i class="fa-solid fa-keyboard"></i>
+                <div class="title">Artículos individuales</div>
+                <div class="detail">
+                    Genera artículos
+                </div>
+            </div>
+        </a>
+
         </div>
 
-        <div id="article"></div>
-        <div id="description"></div>
-    </div>
+        <a href="../politicas/index.html">
+            <div class="card" style="--color: #fff">
+                <i class="fa-solid fa-laptop"></i>
+                <div class="title">Genera Políticas </div>
+                <div class="detail">
+                    Genera solo Políticas
+                </div>
+            </div>
+        </a>
 
-    
+        </div>
 
+
+        <a href="../setup/setup.html">
+            <div class="card" style="--color: #fff">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <div class="title">Setup</div>
+                <div class="detail">
+                    Configura el entorno
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <footer>Todos los derechos reservados &copy; <a href=""> </footer>
 </body>
 
 </html>

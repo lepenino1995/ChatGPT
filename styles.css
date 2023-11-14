@@ -1,0 +1,189 @@
+h10 {
+    font-size: 5vmin;
+    position: absolute;
+    
+}
+
+.pro {
+    color: black;
+    text-shadow:
+        -1px -1px 0 #FFD700,
+        1px -1px 0 #FFD700,
+        -1px 1px 0 #FFD700,
+        1px 1px 0 #FFD700;
+}
+
+.boost {
+    color: #FFD700;
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 47%,
+                10% 48%,
+                33% 54%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #121212;
+    color: #414141;
+    display: flex;
+    min-height: 100vh;
+    /* Establece la altura mínima al 100% de la ventana gráfica */
+    align-items: flex-start;
+    /* Centra verticalmente el contenido en la parte superior */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.input-section {
+    flex: 1;
+    padding: 81px;
+    
+}
+
+.content-section {
+    flex: 2;
+    padding: 60px;
+    
+}
+
+textarea,
+input,
+select,
+button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 300px;
+    background:#2C2C2C ;
+    color: #fff;
+}
+
+button {
+    background-color: #FFD700;
+    color: #1F1F1F;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5);
+}
+
+.checkbox-label {
+    display: block;
+    color: #ddd;
+    margin: 10px 0;
+}
+
+#article,
+#description {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #FFD700;
+    box-shadow: 0 2px 5px rgba(248, 248, 248, 0.1);
+}
+
+/* Customize the label (the container) */
+.container {
+    display: block;
+    color: white;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #FFD700;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

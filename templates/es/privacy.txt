@@ -1,0 +1,46 @@
+<h1>Términos y Condiciones para {{companyName}}</h1>
+
+<h2>Introducción</h2>
+
+<p>Estos Términos y Condiciones Estándar de Sitio Web escritos en esta página web regirán su uso de nuestro sitio web, info-solarenergy.com accesible en info-solarenergy.com.</p>
+
+<p>Estos Términos se aplicarán completamente y afectarán su uso de este Sitio Web. Al usar este Sitio Web, usted acuerda aceptar todos los términos y condiciones aquí escritos. No debe usar este Sitio Web si no está de acuerdo con alguno de estos Términos y Condiciones Estándar del Sitio Web. Estos Términos y Condiciones han sido generados con la ayuda del <a href="https://www.termsandcondiitionssample.com">Generador de Muestras de Términos y Condiciones</a>.</p>
+
+<p>Los menores o personas menores de 18 años no tienen permitido utilizar este Sitio Web.</p>
+
+<h2>Derechos de Propiedad Intelectual</h2>
+
+<p>Aparte del contenido que usted posee, bajo estos Términos, Tick LLC y/o sus licenciantes poseen todos los derechos de propiedad intelectual y materiales contenidos en este Sitio Web.</p>
+
+<p>Se le concede una licencia limitada solo para fines de visualizar el material contenido en este Sitio Web.</p>
+
+<h2>Restricciones</h2>
+
+<p>Se le restringe específicamente de todo lo siguiente:</p>
+
+<ul>
+    <li>publicar cualquier material del Sitio Web en cualquier otro medio;</li>
+    <li>vender, sublicenciar y/o de otra manera comercializar cualquier material del Sitio Web;</li>
+    <li>realizar públicamente y/o mostrar cualquier material del Sitio Web;</li>
+    <li>usar este Sitio Web de cualquier manera que sea o pueda ser perjudicial para este Sitio Web;</li>
+    <li>usar este Sitio Web de cualquier manera que impacte el acceso de los usuarios a este Sitio Web;</li>
+    <li>usar este Sitio Web contrario a las leyes y regulaciones aplicables, o de cualquier manera que pueda causar daño al Sitio Web, o a cualquier persona o entidad comercial;</li>
+    <li>participar en cualquier minería de datos, recolección de datos, extracción de datos o cualquier otra actividad similar en relación con este Sitio Web;</li>
+    <li>usar este Sitio Web para participar en cualquier publicidad o marketing.</li>
+</ul>
+
+<p>Ciertas áreas de este Sitio Web están restringidas para ser accedidas por usted y Tick LLC puede restringir aún más el acceso por su parte a cualquier área de este Sitio Web, en cualquier momento, a absoluta discreción. Cualquier identificación de usuario y contraseña que pueda tener para este Sitio Web son confidenciales y usted debe mantener la confidencialidad también.</p>
+
+<h2>Su Contenido</h2>
+
+<p>En estos Términos y Condiciones Estándar del Sitio Web, "Su Contenido" significará cualquier audio, video, texto, imágenes u otro material que elija mostrar en este Sitio Web. Al mostrar Su Contenido, usted otorga a Tick LLC una licencia no exclusiva, mundial, irrevocable, sublicenciable para usar, reproducir, adaptar, publicar, traducir y distribuirlo en cualquier y todos los medios.</p>
+
+<p>Su Contenido debe ser suyo y no debe invadir los derechos de terceros. Tick LLC se reserva el derecho de eliminar cualquier contenido suyo de este Sitio Web en cualquier momento y sin previo aviso.</p>
+
+<h2>Sin garantías</h2>
+
+<p>Este Sitio Web se proporciona "tal cual", con todos los fallos, y Tick LLC no expresa representaciones o garantías de ningún tipo relacionadas con este Sitio Web o los materiales contenidos en este Sitio Web. Además, nada de lo contenido en este Sitio Web se interpretará como asesoramiento.</p>
+
+<h2>Limitación de responsabilidad</h2>
+
+<p>En ningún caso Tick LLC, ni ninguno de sus oficiales, directores y empleados, será responsable de nada que surja de o de alguna manera relacionado con su uso de este Sitio Web ya sea tal responsabilidad bajo contrato. Tick LLC, incluyendo sus oficiales, directores y empleados no serán responsables
