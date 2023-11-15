@@ -1,12 +1,8 @@
-import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
-import {
-  Parser
-} from 'https://cdn.jsdelivr.net/npm/@json2csv/plainjs@7.0.3/+esm'
-import {downloadCSV} from '../libs/downloadCSV.js'
-import { textGenerator } from '../libs/textGenerator.js'
+import OpenAI from "https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm";
+import { downloadCSV } from "../libs/downloadCSV.js";
+import { textGenerator } from "../libs/textGenerator.js";
 
 const keywordsInput = document.querySelector("#keywords");
-const idioma = document.querySelector('[name="idioma"]');
 const generateButton = document.querySelector("#generate");
 const model = document.querySelector("#model");
 
@@ -20,9 +16,14 @@ const openai = new OpenAI({
 generateButton.addEventListener("click", async () => {
   const keywordsList = keywordsInput.value.split("\n");
   // const keywordsText = keywordsList.join(", ");
-  const idiomaValue = idioma.value;
+  // get of checkbox
+  const idioma = document.querySelector('input[name="idioma"]:checked');
 
-  const language = idioma === "es" ? "español" : "ingles";
+  const idiomaValue = idioma.value;
+  console.log(idiomaValue);
+
+  const language = idiomaValue === "es" ? "español" : "ingles";
+  console.log(language)
 
   let data = [];
 
