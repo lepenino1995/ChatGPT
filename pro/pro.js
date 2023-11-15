@@ -109,7 +109,7 @@ generateButton.addEventListener("click", async () => {
     data.push(result);
   }
 
-  console.log(data);
+  // console.log(data);
 
   downloadCSV({}, data, "articulos");
 });
@@ -146,6 +146,6 @@ async function generateWords(quantity, topic, language = "español") {
     cleanedArticle = completedText.replace(/\n/g, " ");
   }
 
-  console.log(cleanedArticle);
+  // console.log(cleanedArticle);
   return cleanedArticle;
 }
