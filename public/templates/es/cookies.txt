@@ -1,46 +1,55 @@
-<h1>Términos y Condiciones para {{companyName}}</h1>
+<h1>Política de cookies para {{companyName}}</h1>
+<p>Esta es la Política de Cookies de {{companyName}}, accesible desde {{webName}}</p>
 
-<h2>Introducción</h2>
+<h2>¿Qué son las cookies?</2>
 
-<p>Estos Términos y Condiciones Estándar de Sitio Web escritos en esta página web regirán su uso de nuestro sitio web, info-solarenergy.com accesible en info-solarenergy.com.</p>
+<p>Como es práctica común en casi todos los sitios web profesionales, este sitio utiliza cookies,</p>
+<p>que son pequeños archivos que se descargan en su computadora, para mejorar su experiencia. </p>
+<p>Esta página describe qué información recopilan, cómo la usamos y por qué a veces necesitamos almacenar estas cookies.</p> 
+<p>También compartiremos cómo puede evitar que se almacenen estas cookies; sin embargo, esto puede degradar o "romper" ciertos elementos de la funcionalidad del sitio.</p>
 
-<p>Estos Términos se aplicarán completamente y afectarán su uso de este Sitio Web. Al usar este Sitio Web, usted acuerda aceptar todos los términos y condiciones aquí escritos. No debe usar este Sitio Web si no está de acuerdo con alguno de estos Términos y Condiciones Estándar del Sitio Web. Estos Términos y Condiciones han sido generados con la ayuda del <a href="https://www.termsandcondiitionssample.com">Generador de Muestras de Términos y Condiciones</a>.</p>
+<h2>Cómo utilizamos las cookies</2>
+<p>Utilizamos cookies por una variedad de razones que se detallan a continuación. Desafortunadamente, </p>
+<p>en la mayoría de los casos no existen opciones estándar de la industria para deshabilitar las cookies sin deshabilitar completamente la funcionalidad y </p>
+<p>las características que agregan a este sitio. </p>
+<p>Se recomienda que deje activadas todas las cookies si no está seguro de si las necesita o no en caso de que se utilicen para proporcionar un servicio que usted utiliza.</p>
 
-<p>Los menores o personas menores de 18 años no tienen permitido utilizar este Sitio Web.</p>
+<h2>Deshabilitar las cookies</2>
+<p>Puede evitar la configuración de cookies ajustando la configuración de su navegador (consulte la Ayuda de su navegador para saber cómo hacerlo). </p>
+<p>Tenga en cuenta que deshabilitar las cookies afectará la funcionalidad de este y muchos otros sitios web que visite.</p> 
+<p>Deshabilitar las cookies generalmente resultará en la deshabilitación de ciertas funciones y características de este sitio. </p>
+<p>Por ello se recomienda que no desactive las cookies. Esta Política de Cookies ha sido creada con la ayuda del Generador de Políticas de Cookies.</p>
 
-<h2>Derechos de Propiedad Intelectual</h2>
+<h2>Las cookies que configuramos</h2>
+<3>Cookies relacionadas con la cuenta</3>
+<p>Si crea una cuenta con nosotros, utilizaremos cookies para la gestión del proceso de registro y la administración general. </p>
+<p>Estas cookies generalmente se eliminarán cuando cierre la sesión; sin embargo, en algunos casos, </p>
+<p>pueden permanecer después para recordar las preferencias de su sitio cuando cierre la sesión.</p>
 
-<p>Aparte del contenido que usted posee, bajo estos Términos, Tick LLC y/o sus licenciantes poseen todos los derechos de propiedad intelectual y materiales contenidos en este Sitio Web.</p>
+<h2>Cookies de terceros</2>
+<p>En algunos casos especiales también utilizamos cookies proporcionadas por terceros de confianza. </p>
+<p>La siguiente sección detalla qué cookies de terceros puede encontrar a través de este sitio.</p>
 
-<p>Se le concede una licencia limitada solo para fines de visualizar el material contenido en este Sitio Web.</p>
+<p>Este sitio utiliza Google Analytics, que es una de las soluciones de análisis más extendidas y </p>
+<p>confiables en la web para ayudarnos a comprender cómo utiliza el sitio y las formas en que podemos mejorar su experiencia.</p> 
+<p>Estas cookies pueden rastrear cosas como cuánto tiempo pasa en el sitio y las páginas que visita para que podamos continuar produciendo contenido atractivo.</p>
 
-<h2>Restricciones</h2>
 
-<p>Se le restringe específicamente de todo lo siguiente:</p>
+<p>Para obtener más información sobre las cookies de Google Analytics, consulte la página oficial de Google Analytics.</p>
 
-<ul>
-    <li>publicar cualquier material del Sitio Web en cualquier otro medio;</li>
-    <li>vender, sublicenciar y/o de otra manera comercializar cualquier material del Sitio Web;</li>
-    <li>realizar públicamente y/o mostrar cualquier material del Sitio Web;</li>
-    <li>usar este Sitio Web de cualquier manera que sea o pueda ser perjudicial para este Sitio Web;</li>
-    <li>usar este Sitio Web de cualquier manera que impacte el acceso de los usuarios a este Sitio Web;</li>
-    <li>usar este Sitio Web contrario a las leyes y regulaciones aplicables, o de cualquier manera que pueda causar daño al Sitio Web, o a cualquier persona o entidad comercial;</li>
-    <li>participar en cualquier minería de datos, recolección de datos, extracción de datos o cualquier otra actividad similar en relación con este Sitio Web;</li>
-    <li>usar este Sitio Web para participar en cualquier publicidad o marketing.</li>
-</ul>
+<p>El servicio Google AdSense que utilizamos para publicar publicidad utiliza una cookie de DoubleClick para mostrar anuncios más relevantes en la web y</p> 
+<p>limitar la cantidad de veces que se le muestra un anuncio determinado.</p>
 
-<p>Ciertas áreas de este Sitio Web están restringidas para ser accedidas por usted y Tick LLC puede restringir aún más el acceso por su parte a cualquier área de este Sitio Web, en cualquier momento, a absoluta discreción. Cualquier identificación de usuario y contraseña que pueda tener para este Sitio Web son confidenciales y usted debe mantener la confidencialidad también.</p>
+<p>Para obtener más información sobre Google AdSense, consulte las preguntas frecuentes oficiales sobre privacidad de Google AdSense.</p>
 
-<h2>Su Contenido</h2>
+<2>Más información</2>
 
-<p>En estos Términos y Condiciones Estándar del Sitio Web, "Su Contenido" significará cualquier audio, video, texto, imágenes u otro material que elija mostrar en este Sitio Web. Al mostrar Su Contenido, usted otorga a Tick LLC una licencia no exclusiva, mundial, irrevocable, sublicenciable para usar, reproducir, adaptar, publicar, traducir y distribuirlo en cualquier y todos los medios.</p>
+<p>Esperamos que esto le haya aclarado las cosas y, como se mencionó anteriormente, si hay algo que no está seguro de necesitar o no,</p>
+<p>generalmente es más seguro dejar las cookies habilitadas en caso de que interactúe con una de las funciones que utiliza en nuestro sitio.</p>
 
-<p>Su Contenido debe ser suyo y no debe invadir los derechos de terceros. Tick LLC se reserva el derecho de eliminar cualquier contenido suyo de este Sitio Web en cualquier momento y sin previo aviso.</p>
+<3>Para más información general sobre las cookies, lea el artículo Política de Cookies.</3>
 
-<h2>Sin garantías</h2>
+<p>Sin embargo, si todavía está buscando más información, puede contactarnos a través de uno de nuestros métodos de contacto preferidos:</p>
 
-<p>Este Sitio Web se proporciona "tal cual", con todos los fallos, y Tick LLC no expresa representaciones o garantías de ningún tipo relacionadas con este Sitio Web o los materiales contenidos en este Sitio Web. Además, nada de lo contenido en este Sitio Web se interpretará como asesoramiento.</p>
-
-<h2>Limitación de responsabilidad</h2>
-
-<p>En ningún caso Tick LLC, ni ninguno de sus oficiales, directores y empleados, será responsable de nada que surja de o de alguna manera relacionado con su uso de este Sitio Web ya sea tal responsabilidad bajo contrato. Tick LLC, incluyendo sus oficiales, directores y empleados no serán responsables
+<3>Correo electrónico: {{companyEmail}}</3>
+<p>Generado mediante el Generador de Políticas de Cookies</p>

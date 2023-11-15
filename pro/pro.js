@@ -1,7 +1,7 @@
-// import OpenAI from "openai";
 import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
 import { generatePolicy } from "../libs/generatePolicy.js";
 import { downloadCSV } from "../libs/downloadCSV.js";
+import { textGenerator } from '../libs/textGenerator.js'
 
 const keywordInput = document.querySelector("#keywords");
 const keywordsGenerated = document.querySelector("#keywords-generated");
@@ -16,6 +16,11 @@ const websiteName = document.querySelector("#websiteName");
 const websiteUrl = document.querySelector("#websiteURL");
 const country = document.querySelector("#country");
 
+const openai = new OpenAI({
+  apiKey: apiKeyValue,
+  dangerouslyAllowBrowser: true,
+});
+
 window.addEventListener("DOMContentLoaded", async (event) => {
   const res = await fetch("/ChatGPT/data/countries.json");
   const data = await res.json();
@@ -28,10 +33,6 @@ window.addEventListener("DOMContentLoaded", async (event) => {
   country.innerHTML = countries.join("");
 });
 
-const openai = new OpenAI({
-  apiKey: apiKeyValue,
-  dangerouslyAllowBrowser: true,
-});
 
 const allowedEmails = [
   "lepenino@gmail.com",
@@ -57,6 +58,7 @@ function isEmailAllowed(email) {
 
 generateButton.addEventListener("click", async () => {
   const lang = document.querySelector('[name="idioma"]:checked').value;
+
   // Generate Policy
   const conditions = await generatePolicy("conditions", companyName.value);
   const cookies = await generatePolicy("cookies", companyName.value);
@@ -65,6 +67,10 @@ generateButton.addEventListener("click", async () => {
   const policyTitle = lang === "es" ? "Politicas" : "Policies";
   const cookiesTitle = lang === "es" ? "Cookies" : "Cookies";
   const privacyTitle = lang === "es" ? "Privacidad" : "Privacy";
+
+  const language = lang === "es" ? "español" : "english";
+
+  console.log(language);
 
   downloadCSV(
     {
@@ -76,7 +82,6 @@ generateButton.addEventListener("click", async () => {
   );
 
   // Generate Articles
-  const idiomaValue = document.querySelector('[name="idioma"]:checked').value;
   const quantityWords = parseInt(cantidadPalabras.value);
 
   const keyword = keywordInput.value;
@@ -84,13 +89,13 @@ generateButton.addEventListener("click", async () => {
   let data = [];
 
   // Generate words
-  const result = await generateWords(quantityWords, keyword);
+  const result = await generateWords(quantityWords, keyword, language);
   keywordsGenerated.innerHTML = result;
 
   const keywordsList = result.split(",");
 
   for (let i = 0; i < keywordsList.length; i++) {
-    const result = await textGenerator(keywordsList[i], idiomaValue);
+    const result = await textGenerator(keywordsList[i], language);
     console.log(result);
     data.push(result);
   }
@@ -108,64 +113,11 @@ generateButton.addEventListener("click", async () => {
 //   }, 10000);
 // };
 
-async function textGenerator(keywordText, idiomaValue) {
+
+async function generateWords(quantity, topic, language = "español") {
   const text = [];
   let cleanedArticle = "";
-
-  const stream = await openai.chat.completions.create({
-    messages: [
-      {
-        role: "user",
-        content: `Genera un articulo basado en estas palabras claves: ${keywordText}, NO utilices esas palabras mas de 2 veces en todo el articulo y en este lenguaje ${idiomaValue} en formato HTML, que cada parrafo no supere las 200 palabras, con H2 y H3. El articulo debe tener como minimo 400 palabras. No incluyas etiquetas img o video.`,
-      },
-    ],
-    model: model.value,
-    temperature: 0.7,
-    stream: true,
-    max_tokens: 200, //coment this on production
-  });
-
-  for await (const part of stream) {
-    text.push(part.choices[0]?.delta?.content);
-    const article = document.querySelector("#article");
-    const completedText = text.join("");
-    cleanedArticle = completedText.replace(/\n/g, " ");
-    article.innerHTML = cleanedArticle;
-  }
-
-  let descriptionText = [];
-  let cleanedDescription = "";
-  const descriptionStream = await openai.chat.completions.create({
-    messages: [
-      {
-        role: "user",
-        content: `Genera una meta descripcion de maximo 19 palabras iniciando por esta palabra: ${keywordText} y en este lenguaje ${idiomaValue} en formato de texto`,
-      },
-    ],
-    model: model.value,
-    temperature: 0.7,
-    stream: true,
-  });
-
-  for await (const part of descriptionStream) {
-    descriptionText.push(part.choices[0]?.delta?.content);
-    const description = document.querySelector("#description");
-    const completedText = descriptionText.join("");
-    cleanedDescription = completedText.replace(/\n/g, " ");
-    description.innerHTML = cleanedDescription;
-  }
-
-  return {
-    palabra: keywordText,
-    articulo: cleanedArticle,
-    description: cleanedDescription,
-  };
-}
-
-async function generateWords(quantity, topic) {
-  const text = [];
-  let cleanedArticle = "";
-  const prompt = `Genera una lista de ${quantity} palabras clave para un articulo sobre ${topic} separado por comas`;
+  const prompt = `Genera una lista de ${quantity} palabras clave para un articulo sobre ${topic} separado por comas, y escrito en el lenguaje ${language}`;
   // const prompt = `Genera un un palabra aleatoria para un articulo sobre ${topic}`;
 
   const stream = await openai.chat.completions.create({

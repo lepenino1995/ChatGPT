@@ -2,7 +2,8 @@ import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
 import {
   Parser
 } from 'https://cdn.jsdelivr.net/npm/@json2csv/plainjs@7.0.3/+esm'
-
+import {downloadCSV} from '../libs/downloadCSV.js'
+import { textGenerator } from '../libs/textGenerator.js'
 
 const keywordsInput = document.querySelector("#keywords");
 const idioma = document.querySelector('[name="idioma"]');
@@ -21,95 +22,74 @@ generateButton.addEventListener("click", async () => {
   // const keywordsText = keywordsList.join(", ");
   const idiomaValue = idioma.value;
 
+  const language = idioma === "es" ? "español" : "ingles";
+
   let data = [];
 
   for (let i = 0; i < keywordsList.length; i++) {
-    const result = await textGenerator(keywordsList[i], idiomaValue);
+    const result = await textGenerator(keywordsList[i], language);
     data.push(result);
   }
 
   downloadCSV(data);
 });
 
-async function textGenerator(keywordText, idiomaValue) {
-  const text = [];
-  let cleanedArticle = "";
+// async function textGenerator(keywordText, idiomaValue) {
+//   const text = [];
+//   let cleanedArticle = "";
 
-  const stream = await openai.chat.completions.create({
-    messages: [
-      {
-        role: "user",
-        content: `Genera un articulo basado en estas palabras claves: ${keywordText} y en este lenguaje ${idiomaValue} en formato HTML. No incluyas etiquetas img o video.`,
-      },
-    ],
-    model: model.value,
-    temperature: 0.7,
-    stream: true,
-    // max_tokens: 100,
-  });
+//   const stream = await openai.chat.completions.create({
+//     messages: [
+//       {
+//         role: "user",
+//         content: `Genera un articulo basado en estas palabras claves: ${keywordText} y en este lenguaje ${idiomaValue} en formato HTML. No incluyas etiquetas img o video.`,
+//       },
+//     ],
+//     model: model.value,
+//     temperature: 0.7,
+//     stream: true,
+//     // max_tokens: 100,
+//   });
 
-  for await (const part of stream) {
-    // console.log(part.choices[0]?.delta?.content);
-    text.push(part.choices[0]?.delta?.content);
+//   for await (const part of stream) {
+//     // console.log(part.choices[0]?.delta?.content);
+//     text.push(part.choices[0]?.delta?.content);
 
-    const article = document.querySelector("#article");
-    const completedText = text.join("");
-    cleanedArticle = completedText.replace(/\n/g, " ");
-    // cleanedArticle = completedText.replace(/[^<>]+/g, "");
-    article.innerHTML = cleanedArticle;
-  }
+//     const article = document.querySelector("#article");
+//     const completedText = text.join("");
+//     cleanedArticle = completedText.replace(/\n/g, " ");
+//     // cleanedArticle = completedText.replace(/[^<>]+/g, "");
+//     article.innerHTML = cleanedArticle;
+//   }
 
-  let descriptionText = [];
-  let cleanedDescription = "";
-  const descriptionStream = await openai.chat.completions.create({
-    messages: [
-      {
-        role: "user",
-        content: `Genera una meta descripcion para un articulo basado en estas palabras claves: ${keywordText} y en este lenguaje ${idiomaValue} en formato de texto`,
-      },
-    ],
-    model: model.value,
-    temperature: 0.7,
-    stream: true,
-  });
+//   let descriptionText = [];
+//   let cleanedDescription = "";
+//   const descriptionStream = await openai.chat.completions.create({
+//     messages: [
+//       {
+//         role: "user",
+//         content: `Genera una meta descripcion para un articulo basado en estas palabras claves: ${keywordText} y en este lenguaje ${idiomaValue} en formato de texto`,
+//       },
+//     ],
+//     model: model.value,
+//     temperature: 0.7,
+//     stream: true,
+//   });
 
-  // console.log(descriptionStream);
+//   // console.log(descriptionStream);
 
-  for await (const part of descriptionStream) {
-    descriptionText.push(part.choices[0]?.delta?.content);
+//   for await (const part of descriptionStream) {
+//     descriptionText.push(part.choices[0]?.delta?.content);
 
-    const description = document.querySelector("#description");
-    const completedText = descriptionText.join("");
-    cleanedDescription = completedText.replace(/\n/g, " ");
-    description.innerHTML = cleanedDescription;
-  }
+//     const description = document.querySelector("#description");
+//     const completedText = descriptionText.join("");
+//     cleanedDescription = completedText.replace(/\n/g, " ");
+//     description.innerHTML = cleanedDescription;
+//   }
 
-  return {
-    palabra: keywordText,
-    articulo: cleanedArticle,
-    description: cleanedDescription,
-  };
-}
-
-function downloadCSV(rows) {
-  try {
-    const parser = new Parser();
-    const csv = parser.parse(rows);
-
-    console.log(csv);
-
-    // download csv file
-    const downloadLink = document.createElement("a");
-    const blob = new Blob(["\ufeff", csv]);
-    const url = URL.createObjectURL(blob);
-    downloadLink.href = url;
-    downloadLink.download = "data.csv";
-
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-
-    // document.body.removeChild(downloadLink);
-  } catch (err) {
-    console.error(err);
-  }
-}
+//   return {
+//     palabra: keywordText,
+//     articulo: cleanedArticle,
+//     description: cleanedDescription,
+//   };
+// }
