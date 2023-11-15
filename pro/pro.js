@@ -1,7 +1,7 @@
-import OpenAI from 'https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm'
+import OpenAI from "https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm";
 import { generatePolicy } from "../libs/generatePolicy.js";
 import { downloadCSV } from "../libs/downloadCSV.js";
-import { textGenerator } from '../libs/textGenerator.js'
+import { textGenerator } from "../libs/textGenerator.js";
 
 const keywordInput = document.querySelector("#keywords");
 const keywordsGenerated = document.querySelector("#keywords-generated");
@@ -32,7 +32,6 @@ window.addEventListener("DOMContentLoaded", async (event) => {
 
   country.innerHTML = countries.join("");
 });
-
 
 const allowedEmails = [
   "lepenino@gmail.com",
@@ -70,14 +69,24 @@ generateButton.addEventListener("click", async () => {
 
   const language = lang === "es" ? "español" : "english";
 
-  console.log(language);
+  const opts = { fields: ["content", "value"] };
 
   downloadCSV(
-    {
-      [policyTitle]: conditions,
-      [cookiesTitle]: cookies,
-      [privacyTitle]: privacy,
-    },
+    opts,
+    [
+      {
+        content: policyTitle,
+        value: conditions,
+      },
+      {
+        content: cookiesTitle,
+        value: cookies,
+      },
+      {
+        content: privacyTitle,
+        value: privacy,
+      },
+    ],
     "politicas"
   );
 
@@ -102,7 +111,7 @@ generateButton.addEventListener("click", async () => {
 
   console.log(data);
 
-  downloadCSV(data, "articulos");
+  downloadCSV({}, data, "articulos");
 });
 
 // window.onload = function () {
@@ -112,7 +121,6 @@ generateButton.addEventListener("click", async () => {
 //     ipCheckSection.style.display = "none";
 //   }, 10000);
 // };
-
 
 async function generateWords(quantity, topic, language = "español") {
   const text = [];
