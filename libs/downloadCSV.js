@@ -5,9 +5,9 @@ import {
 } from 'https://cdn.jsdelivr.net/npm/@json2csv/plainjs@7.0.3/+esm'
 
 
-export function downloadCSV(rows, name = "data") {
+export function downloadCSV(opts = {}, rows, name = "data") {
   try {
-    const parser = new Parser();
+    const parser = new Parser(opts);
     const csv = parser.parse(rows);
     const downloadLink = document.createElement("a");
     const blob = new Blob(["\ufeff", csv]);
