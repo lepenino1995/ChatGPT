@@ -21,7 +21,6 @@ export async function textGenerator(keywordText, idiomaValue) {
         model: model.value,
         temperature: 0.7,
         stream: true,
-        max_tokens: 200, //coment this on production
     });
 
     for await (const part of stream) {
