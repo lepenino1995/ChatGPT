@@ -23,7 +23,7 @@ generateButton.addEventListener("click", async () => {
   console.log(idiomaValue);
 
   const language = idiomaValue === "es" ? "español" : "ingles";
-  console.log(language)
+  console.log(language);
 
   let data = [];
 
@@ -32,7 +32,7 @@ generateButton.addEventListener("click", async () => {
     data.push(result);
   }
 
-  downloadCSV(data);
+  downloadCSV({}, data, "articulo");
 });
 
 // async function textGenerator(keywordText, idiomaValue) {
