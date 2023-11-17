@@ -50,6 +50,7 @@ btnGenerate.addEventListener("click", async () => {
   const privacyTitle = lang === "es" ? "Privacidad" : "Privacy";
 
   downloadCSV(
+    {},
     {
       [policyTitle]: conditions,
       [cookiesTitle]: cookies,

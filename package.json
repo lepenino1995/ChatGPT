@@ -11,12 +11,12 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0",
-    "vite": "^4.4.5",
-    "vite-plugin-static-copy": "^0.17.0"
+    "vite": "^5.0.0",
+    "vite-plugin-static-copy": "^0.17.1"
   },
   "dependencies": {
     "@json2csv/plainjs": "^7.0.3",
-    "csv": "^6.3.3",
-    "openai": "^4.11.1"
+    "csv": "^6.3.5",
+    "openai": "^4.19.0"
   }
 }
