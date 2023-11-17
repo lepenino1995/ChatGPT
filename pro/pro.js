@@ -58,10 +58,36 @@ function isEmailAllowed(email) {
 generateButton.addEventListener("click", async () => {
   const lang = document.querySelector('[name="idioma"]:checked').value;
 
+  console.log({
+    companyName: companyName.value,
+    webName: websiteName.value,
+    webURL: websiteUrl.value,
+    companyCountry: country.value,
+    companyEmail: companyEmail.value,
+  });
+
   // Generate Policy
-  const conditions = await generatePolicy("conditions", companyName.value);
-  const cookies = await generatePolicy("cookies", companyName.value);
-  const privacy = await generatePolicy("privacy", companyName.value);
+  const conditions = await generatePolicy("conditions", {
+    companyName: companyName.value,
+    webName: websiteName.value,
+    webURL: websiteUrl.value,
+    companyCountry: country.value,
+    companyEmail: companyEmail.value,
+  });
+  const cookies = await generatePolicy("cookies", {
+    companyName: companyName.value,
+    webName: websiteName.value,
+    webURL: websiteUrl.value,
+    companyCountry: country.value,
+    companyEmail: companyEmail.value,
+  });
+  const privacy = await generatePolicy("privacy", {
+    companyName: companyName.value,
+    webName: websiteName.value,
+    webURL: websiteUrl.value,
+    companyCountry: country.value,
+    companyEmail: companyEmail.value,
+  });
 
   const policyTitle = lang === "es" ? "Politicas" : "Policies";
   const cookiesTitle = lang === "es" ? "Cookies" : "Cookies";
