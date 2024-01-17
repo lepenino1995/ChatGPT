@@ -30,6 +30,7 @@ para subir los cambios
 ```
 git push origin main
 ```
+.
 
 ### Identificadores de Texto de Politicas
 
