@@ -15,7 +15,14 @@ export async function textGenerator(keywordText, idiomaValue) {
         messages: [
             {
                 role: "user",
-                content: `Genera un articulo basado en estas palabras claves: ${keywordText}, NO utilices esas palabras mas de 2 veces en todo el articulo y el texto tiene que estar escrito en el lenguaje ${idiomaValue} y en formato HTML, que cada parrafo no supere las 200 palabras, con H2 y H3. El articulo debe tener como minimo 400 palabras. No incluyas etiquetas img o video.`,
+                content: `Eres un experto SEO. 
+                Debes crear un articulo con estas palabras claves: ${keywordText} y en este idioma: ${idiomaValue}. Sigue este formato:
+                1: Un H1 llamativo 
+                2: Un parrafo basado en el H1
+                3: Genera 5 H2 y sus parrafos
+                4: Una conclusion
+                5: En formato HTML
+                6: No incluyas etiquetas img o video`,
             },
         ],
         model: model.value,
