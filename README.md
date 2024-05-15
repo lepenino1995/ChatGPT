@@ -53,3 +53,11 @@ git push origin main
 ```
 {{companyEmail}}
 ```
+
+``` 
+${keywordText}
+```
+
+```
+${idiomaValue}
+```
