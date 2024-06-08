@@ -16,13 +16,14 @@ export async function textGeneratornewall(keywordText, idiomaValue) {
             {
                 role: "user",
                 content: `Redacta un artículo titulado: "${keywordText}", con este idioma ${idiomaValue}.
-                Será un artículo extenso, en el que adoptarás el rol de una persona llamada Leandro, que a partir de su experiencia explica de qué trata el tema "Nombre del articulo"
+                Será un artículo extenso, en el que adoptarás el rol de una persona llamada Leandro, que a partir de su experiencia explica de qué trata el tema "${keywordText}"
                 El artículo debe utilizar un tono desenfadado, pero manifestando gran autoridad, pues la persona habla a partir de su experiencia y análisis.
                 La extensión ha de ser de al menos 2500 palabras.
-                Optimiza el artículo a nível de SEO para que en los encabezados y en el texto aparezcan los términos claves: "Nombre del articulo", así como sus sinónimos, o términos que la gente puede utilizar para conocer la diferencia entre ellos y cuál es mejor. Busca enlaces con contenido relacionado e incorpóralos en el articulo
+                Optimiza el artículo a nível de SEO para que en los encabezados y en el texto aparezcan los términos claves: ${keywordText}, así como sus sinónimos, o términos que la gente puede utilizar para conocer la diferencia entre ellos y cuál es mejor. Busca enlaces con contenido relacionado e incorpóralos en el articulo
                 Optimiza los títulares de las secciones para el SEO (añade palabras clave en las metas
                 H2, H3, etc)
-                Consulta Internet para conocer la competencia que hable igual de este nicho, e incluye esta información en el artículo.`,
+                Consulta Internet para conocer la competencia que hable igual de este nicho, e incluye esta información en el artículo.
+                Damelo todo en formato HTML, utilizando de manera correcta los H1,H2,H3 y Parrafos`,
             },
         ],
         model: model.value,
