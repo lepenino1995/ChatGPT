@@ -27,6 +27,10 @@ export default defineConfig({
           src: "libs",
           dest: ".", 
         },
+        {
+          src: "newall",
+          dest: ".", 
+        },
       ],
     }),
   ],
