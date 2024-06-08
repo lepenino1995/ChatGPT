@@ -1,6 +1,6 @@
 import OpenAI from "https://cdn.jsdelivr.net/npm/openai@4.17.5/+esm";
 import { downloadCSV } from "../libs/downloadCSV.js";
-import { textGeneratornewall } from "../libs/textGenerator.js";
+import { textGeneratornewall } from "../libs/textGeneratornewall.js";
 
 const keywordsInput = document.querySelector("#keywords");
 const generateButton = document.querySelector("#generate");
