@@ -17,11 +17,11 @@ export async function textGenerator(keywordText, idiomaValue) {
                 role: "user",
                 content: `Eres un experto SEO. 
                 Debes crear un articulo con estas palabras claves: ${keywordText} y en este idioma: ${idiomaValue}. Sigue este formato:
-                1: Un H1 llamativo 
-                2: Un parrafo basado en el H1
-                3: Genera 5 H2 y sus parrafos
-                4: Una conclusion
-                5: En formato HTML
+                1: Un H1 llamativo,
+                2: Un parrafo basado en el H1,
+                3: Genera 5 H2 y sus parrafos,
+                4: Una conclusion,
+                5: En formato HTML,
                 6: No incluyas etiquetas img o video`,
             },
         ],
