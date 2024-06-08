@@ -15,14 +15,14 @@ export async function textGeneratornewall(keywordText, idiomaValue) {
         messages: [
             {
                 role: "user",
-                content: `Eres un experto SEO. 
-                Debes crear un articulo con estas palabras claves: ${keywordText} y en este idioma: ${idiomaValue}. Sigue este formato:
-                1: Un H1 llamativo,
-                2: Un parrafo basado en el H1,
-                3: Genera 5 H2 y sus parrafos,
-                4: Una conclusion,
-                5: En formato HTML,
-                6: No incluyas etiquetas img o video`,
+                content: `Redacta un artículo titulado: "${keywordText}", con este idioma ${idiomaValue}.
+                Será un artículo extenso, en el que adoptarás el rol de una persona llamada Leandro, que a partir de su experiencia explica de qué trata el tema "Nombre del articulo"
+                El artículo debe utilizar un tono desenfadado, pero manifestando gran autoridad, pues la persona habla a partir de su experiencia y análisis.
+                La extensión ha de ser de al menos 2500 palabras.
+                Optimiza el artículo a nível de SEO para que en los encabezados y en el texto aparezcan los términos claves: "Nombre del articulo", así como sus sinónimos, o términos que la gente puede utilizar para conocer la diferencia entre ellos y cuál es mejor. Busca enlaces con contenido relacionado e incorpóralos en el articulo
+                Optimiza los títulares de las secciones para el SEO (añade palabras clave en las metas
+                H2, H3, etc)
+                Consulta Internet para conocer la competencia que hable igual de este nicho, e incluye esta información en el artículo.`,
             },
         ],
         model: model.value,
