@@ -11,10 +11,8 @@
 body {
     background-color: #111; /* Fondo oscuro */
     color: white;
-    padding: 20px;
     min-height: 100vh;
 }
-
 
 /* Estilo para títulos */
 h1,
@@ -51,6 +49,8 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
     max-width: 400px;
     margin: auto;
+    justify-content: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Centra el texto */
 }
 
 /* Inputs y botones */
@@ -68,6 +68,7 @@ button {
     background: #2C2C2C; /* Fondo oscuro */
     color: #fff;
     display: block;
+    text-align: center; /* Centra el texto dentro de los inputs */
 }
 
 button {

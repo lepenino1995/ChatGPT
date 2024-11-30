@@ -1,127 +1,271 @@
+/* General */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: all 0.35s linear;
-    font-family: "poppins", sans-serif;
-  }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    background-color: #111;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.35s linear;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+}
 
-  section a {
-    text-decoration: none;
-  }
-  
-  .card {
-    --color: #0000FF;
-    --border-size: 3rem;
-    --bg-color: #252525;
-    position: relative;
-    background-color: var(--bg-color);
-    width: 280px;
-    margin: 2rem;
-    border-radius: var(--border-size);
-    color: white;
-    display: grid;
-    place-content: center;
-    padding: 8rem 1rem;
-    isolation: isolate;
-    overflow: hidden;
-  }
-  
-  .card::before,
-  .card::after {
-    content: "";
-    position: absolute;
-  } 
-  
-  .card::before {
-    width: 200%;
-    height: 200%;
-    background-image: conic-gradient(var(--color) 0deg,
-    transparent 60deg,
-    transparent 180deg,
-    var(--color) 180deg,
-    transparent 240deg);
-    inset: -50%;
-    z-index: -2;
-    animation: border 8s linear infinite;
-  }
-  
-  .card:hover::before {
-    animation-play-state: paused;
-  }
-  
-  @keyframes border {
-    to{
+/* Cuerpo */
+body {
+  background-color: #111;
+  color: white;
+}
+
+/* Encabezados */
+h1 {
+  color: aliceblue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  text-shadow: 0px 0px 20px white;
+  margin: 20px 0;
+}
+
+h3 {
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  min-height: 5vh;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Sección principal */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background-color: #111;
+  padding: 2rem;
+}
+
+section a {
+  text-decoration: none;
+}
+
+/* Tarjetas */
+.card {
+  --color: #0000FF;
+  --border-size: 3rem;
+  --bg-color: #252525;
+  position: relative;
+  background-color: var(--bg-color);
+  width: 280px;
+  margin: 2rem;
+  border-radius: var(--border-size);
+  color: white;
+  display: grid;
+  place-content: center;
+  padding: 8rem 1rem;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+}
+
+.card::before {
+  width: 200%;
+  height: 200%;
+  background-image: conic-gradient(
+      var(--color) 0deg,
+      transparent 60deg,
+      transparent 180deg,
+      var(--color) 180deg,
+      transparent 240deg
+  );
+  inset: -50%;
+  z-index: -2;
+  animation: border 8s linear infinite;
+}
+
+.card:hover::before {
+  animation-play-state: paused;
+}
+
+@keyframes border {
+  to {
       transform: rotateZ(-360deg);
-    }
   }
-  
-  .card::after {
-    --inset: 0.25rem;
-    background-color: #111;
-    inset: var(--inset);
-    border-radius: calc(var(--border-size) - var(--inset));
-    z-index: -1;
-    transition: all 0.35s linear;
-  }
-  
-  .card:hover::after {
-    background-color: var(--bg-color);
-  }
-  
-  .card i {
-    font-size: 4rem;
-    margin-inline: auto;
-    color: transparent;
-    -webkit-text-stroke: thin var(--color);
-  }
-  
-  .card:hover i {
-    color: var(--color);
-    -webkit-text-stroke-width: 0;
-  }
-  
-  .card .title {
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 1.875rem;
-    margin-block: 2.5rem 1.5rem;
-    color: var(--color);
-  }
-  
-  .card .detail {
-    line-height: 1.5rem;
-    text-align: center;
-    opacity: 0.75;
-  }
+}
 
-  h1 {
-    color: aliceblue;
-    position: relative;
-    background-color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 10vh;
-    text-shadow: 0px 0px 20px white;
-  
-  }
+.card::after {
+  --inset: 0.25rem;
+  background-color: #111;
+  inset: var(--inset);
+  border-radius: calc(var(--border-size) - var(--inset));
+  z-index: -1;
+  transition: all 0.35s linear;
+}
 
-  footer {
-    background-color: #111;
-    color: white;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card:hover::after {
+  background-color: var(--bg-color);
+}
+
+.card i {
+  font-size: 4rem;
+  margin-inline: auto;
+  color: transparent;
+  -webkit-text-stroke: thin var(--color);
+}
+
+.card:hover i {
+  color: var(--color);
+  -webkit-text-stroke-width: 0;
+}
+
+.card .title {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  margin-block: 2.5rem 1.5rem;
+  color: var(--color);
+}
+
+.card .detail {
+  line-height: 1.5rem;
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* Formularios */
+.input-section {
+  display: flex;
+  padding: 20px;
+  width: 33%;
+  justify-content: center;
+  gap: 20px 10px;
+}
+
+textarea,
+input,
+select,
+button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 300px;
+  background: #2C2C2C;
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px #007bff;
+}
+
+/* Checkbox */
+.container {
+  display: block;
+  color: white;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  width: 300px;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Contenedores */
+.container-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Contenido adicional */
+.content-section {
+  padding: 0 20px;
+  width: 50%;
+}
+
+#article,
+#description,
+#keywords-generated {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(248, 248, 248, 0.1);
+  width: 350px;
+  color: white;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 800px) {
+  .container-content {
+      flex-direction: column;
   }
+}
+
+/* Pie de página */
+footer {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
