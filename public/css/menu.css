@@ -1,0 +1,30 @@
+nav {
+    margin: 20px 0; /* Añade margen superior e inferior */
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Muestra los elementos en línea */
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: #fafafa; /* Color del texto */
+    font-weight: bold; /* Hace el texto más grueso */
+    font-size: 1.1em; /* Tamaño del texto */
+    padding: 10px 15px; /* Añade espacio alrededor del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, color 0.3s; /* Animación al pasar el ratón */
+}
+
+nav ul li a:hover {
+    color: #fff; /* Color del texto al pasar el ratón */
+    background-color: #007BFF; /* Fondo al pasar el ratón */
+}

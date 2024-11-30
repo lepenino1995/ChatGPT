@@ -18,7 +18,6 @@ h1 {
     justify-content: center;
     align-items: center;
     min-height: 10vh;
-    text-shadow: 0px 0px 20px white;
 
 }
 
@@ -29,7 +28,6 @@ h3 {
     justify-content: center;
     min-height: 5vh;
     /* Reducido de 10vh a 5vh */
-    text-shadow: 0px 0px 15px white;
     padding: 5px 0;
     /* Ajusta esto según lo necesites */
     margin: 0;
@@ -66,7 +64,7 @@ select,
 button {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid white;
+    border: 1px solid #444; /* Bordes oscuros */
     border-radius: 5px;
     font-size: 16px;
     width: 300px;
@@ -78,7 +76,7 @@ button {
 
 button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px white;
+  box-shadow: 0 4px 8px #007bff; /* Sombra azul */
 }
 
 .checkbox-label {
@@ -130,7 +128,7 @@ button:hover {
   
   /* When the checkbox is checked, add a blue background */
   .container input:checked ~ .checkmark {
-    background-color: #111;
+    background-color: #007bff; /* Azul para el checkbox */
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -164,7 +162,7 @@ button:hover {
     margin-top: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: whitesmoke;
+    background-color: #1e1e1e; /* Fondo oscuro */
     box-shadow: 0 2px 5px rgba(248, 248, 248, 0.1);
     width: 350px;
     height: 200px;
